@@ -1,4 +1,7 @@
-(function(cookieName, domain){
+(function(config){
+
+    var cookieName = config["cookieName"];
+    var domain = config["domain"];
 
     var traffic_source_COOKIE_TOKEN_SEPARATOR = ">>"; //separating between concatenated lead source
     var traffic_source_date_SEPARATOR = "|>"
@@ -161,4 +164,7 @@
         }
     }
 
- })("traffic_source", ".YOURDOMAIN.COM");
+ })({
+    cookieName: "traffic_source",
+    domain: "yourdomain.com"
+ });
